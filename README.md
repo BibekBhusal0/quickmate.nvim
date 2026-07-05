@@ -76,7 +76,7 @@ Help docs:
 - `:Check <shell command>` runs an arbitrary shell command and [parses](#parser-strategy) diagnostics
 - `:Check @<preset-name>` using a registered or [built-in preset](#built-in-presets)
 - `:CheckScript <script-name>` runs a package manager script with [auto-detected](#package-manager-detection) package manager
-- `:CheckPreset <name>` runs a registered [preset](#built-in-presets) by name
+- `:CheckPreset <name>` runs a registered [preset](#built-in-presets) by name (Preset is optional if preset not provided it will prompt you to select a preset)
 
 Examples:
 

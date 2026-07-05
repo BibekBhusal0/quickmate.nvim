@@ -159,6 +159,7 @@ Manager-aware JS/TS command mapping:
    - explicit preset shorthand: `:Check @<preset>`
 2. `:CheckScript <pnpm-script-name>`
 3. `:CheckPreset <name>`
+   - preset name is optional, it will prompt to select preset if not provided
 
 ## Messaging Policy (v1)
 
