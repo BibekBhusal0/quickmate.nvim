@@ -75,9 +75,19 @@ function M.register(state, api)
   })
 
   vim.api.nvim_create_user_command('CheckPreset', function(args)
+    if args.args == '' then
+      local suggestions = {}
+      for name, _ in pairs(state.presets) do
+        suggestions[#suggestions + 1] = name
+      end
+      vim.ui.select(suggestions, {}, function(preset)
+        api.run_preset(preset)
+      end)
+      return
+    end
     api.run_preset(args.args)
   end, {
-    nargs = 1,
+    nargs = '?',
     complete = preset_complete,
     desc = 'Run named check preset and parse output into quickfix',
   })
